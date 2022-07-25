@@ -4,13 +4,180 @@
   
     
     <entry>
-      <title>测试文章</title>
-      <link href="/posts/4131/"/>
-      <url>/posts/4131/</url>
+      <title>记一次黑苹果</title>
+      <link href="/posts/49129/"/>
+      <url>/posts/49129/</url>
       
-        <content type="html"><![CDATA[<p>[checkbox]默认复选框[&#x2F;checkbox]<br>[checkbox checked&#x3D;”true”]已经完成的项目[&#x2F;checkbox]<br>[checkbox checked&#x3D;”false”]还未完成的项目[&#x2F;checkbox]</p><p><label>默认标签</label></p><pre><code>epvihdlbj kc</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>觉得好玩</p><p>比较幸运，在Github上找到了3年前一位大佬制作的MacOS Mojave 18D42版</p><p>那个版本已经被他完美黑了</p><p>可惜我当时装的版本已经是Monterey，Mojave太老了</p><p>由于通用的EFI不能驱动到声卡，于是我找到了那位大佬，看看是否可以解决</p><p>不料大佬的电脑不在身边了<br><img src="/img/post/apple/a-1.jpg" alt="最后一次对话"><br>其他对话就不放了，没办法，只能自己动手（</p><h1 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h1><p>现在的黑苹果镜像都很好找</p><p>请去<a href="https://www.pcbeta.com/">远景论坛</a>或者<a href="https://blog.daliansky.net/">黑果小兵部落阁</a></p><p>这里不放出下载链接</p>]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>便携版Git配置</title>
+      <link href="/posts/44324/"/>
+      <url>/posts/44324/</url>
+      
+        <content type="html"><![CDATA[<h2 id="注册表"><a href="#注册表" class="headerlink" title="注册表"></a>注册表</h2><p>右键新建文本文档,添加以下内容（图标与命令行目录请自行修改自行修改）</p><pre><code>Windows Registry Editor Version 5.00[-HKEY_CLASSES_ROOT\Directory\Background\shell\open in git][HKEY_CLASSES_ROOT\Directory\Background\shell\open in git]@=&quot;Git Bash Here&quot;&quot;icon&quot;=&quot;D:\\Git\\mingw64\\share\\git\\git-for-windows.ico&quot;[HKEY_CLASSES_ROOT\Directory\Background\shell\open in git\command]@=&quot;D:\\Git\\git-bash.exe&quot;</code></pre><p>保存,把文件后缀 【txt】 改为 【reg】 ————双击添加</p><h2 id="添加到Windows-terminal"><a href="#添加到Windows-terminal" class="headerlink" title="添加到Windows terminal"></a>添加到Windows terminal</h2><p>如已下载，打开</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>咕咕咕~</title>
+      <link href="/posts/33717/"/>
+      <url>/posts/33717/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2022-7-24"><a href="#2022-7-24" class="headerlink" title="2022-7-24"></a>2022-7-24</h1><p>主题从Fluid换到Argon<br>文章参数更新：</p><p>Argon 支持给文章设定一些单独的参数，例如文章头图</p><table><thead><tr><th>参数名</th><th>解释</th></tr></thead><tbody><tr><td>thumbnail</td><td>文章头图地址</td></tr><tr><td>first_image_as_thumbnail</td><td>该篇文章是否选用文中第一张图作为头图</td></tr><tr><td>after_post</td><td>文末附加内容</td></tr><tr><td>excerpt</td><td>文章自定义摘要</td></tr></tbody></table><h1 id="2022-6-22"><a href="#2022-6-22" class="headerlink" title="2022-6-22"></a>2022-6-22</h1><p>不知道写点什么……</p><h1 id="时间忘了"><a href="#时间忘了" class="headerlink" title="时间忘了"></a>时间忘了</h1><p>从wordpress转hexo</p><h1 id="2021-7-30"><a href="#2021-7-30" class="headerlink" title="2021-7-30"></a>2021-7-30</h1><p>刚建成~</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Github Action+Hexo 在线写作</title>
+      <link href="/posts/35531/"/>
+      <url>/posts/35531/</url>
+      
+        <content type="html"><![CDATA[<h1 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h1><p><font size=3 >1、关联源文件仓库</font></p><pre><code>git remote add origin git@github.com:&lt;你的用户名&gt;/&lt;存放源文件的仓库名&gt;.git</code></pre><p><font size=3 >2、仓库同步</font></p><pre><code>git pull --rebase origin master</code></pre><p><font size=3 >3、依次输入</font></p><!-- tab 1 --><pre><code>git add .</code></pre><!-- endtab --><!-- tab 2 --><pre><code>git commit -m &quot;init repo&quot;</code></pre><!-- endtab --><!-- tab 3 --><pre><code>git push -u origin master</code></pre><!-- endtab --><p><strong>注意：如theme文件夹中主题文件中有.git文件，请将其删除在上传</strong></p><h1 id="仓库配置"><a href="#仓库配置" class="headerlink" title="仓库配置"></a>仓库配置</h1><p>在C:\Users\用户名.ssh可找到id_rsa文件</p><p>VScode打开</p><p>复制全部</p><ul><li>私钥的配置，点击 <a href="https://github.com/">https://github.com/</a>&lt;你的用户名&gt;&#x2F;&lt;存放源文件的仓库名&gt;&#x2F;settings&#x2F;secrets，新建私钥，注意，这里的名称要填HEXO_DEPLOY_PRIVATE_KEY</li></ul><p>回到仓库的Action</p><p><font size=4 >点击<strong>set up a workflow yourself→</strong></font></p><p>用以下代码替换全部</p><pre><code># workflow namename: Hexo Blog CI# master branch on push, auto runon:   push:    branches:      - master      jobs:  build:     runs-on: ubuntu-latest             steps:    # check it to your workflow can access it    # from: https://github.com/actions/checkout    - name: Checkout Repository master branch      uses: actions/checkout@master           # from: https://github.com/actions/setup-node      - name: Setup Node.js 12.x       uses: actions/setup-node@master      with:        node-version: &quot;12.x&quot;        - name: Setup Hexo Dependencies      run: |        npm install hexo-cli -g        npm install                - name: Setup Deploy Private Key      env:        HEXO_DEPLOY_PRIVATE_KEY: $&#123;&#123; secrets.HEXO_DEPLOY_PRIVATE_KEY &#125;&#125;      run: |        mkdir -p ~/.ssh/        echo &quot;$HEXO_DEPLOY_PRIVATE_KEY&quot; &gt; ~/.ssh/id_rsa         chmod 600 ~/.ssh/id_rsa        ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts                    - name: Setup Git Infomation      run: |         git config --global user.name &#39;&lt;你的用户名&gt;&#39;         git config --global user.email &#39;&lt;你登录的email&gt;&#39;    - name: Deploy Hexo       run: |        hexo clean        hexo generate         hexo deploy        </code></pre><p>然后保存，大功告成</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Github Page </tag>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ODT安装Office-微软官方</title>
+      <link href="/posts/62562/"/>
+      <url>/posts/62562/</url>
+      
+        <content type="html"><![CDATA[<p><strong>虽然现在市面上有许许多多的Office安装软件与下载包，如嫌麻烦请另寻其它</strong></p><h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>如果之前安装过了Office,首先要卸载掉之前的Office<br>建议使用接 <a href="https://support.office.com/en-us/article/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8">微软官方卸载器</a>，或者使用<a href="https://geekuninstaller.com/download">Geek Uninstaller</a><br>当然我自己都觉得麻烦，所以进入控制面板卸载就行了</p><h2 id="卸载先前的Office密钥"><a href="#卸载先前的Office密钥" class="headerlink" title="卸载先前的Office密钥"></a>卸载先前的Office密钥</h2><p>进入Office安装目录（自行修改路径，内有OSPP.VBS文件）</p><pre><code>cd “C:\Program Files\Microsoft Office\Office16”</code></pre><p>查看已设置激活的密钥</p><pre><code>cscript ospp.vbs /dstatus</code></pre><p>输出命令</p><pre><code>---Processing-----------------------------------------------------------------PRODUCT ID: SKU ID: LICENSE NAME: LICENSE DESCRIPTION: BETA EXPIRATION: LICENSE STATUS:  ---LICENSED---REMAINING GRACE: Last 5 characters of installed product key: xxxxx       五个字符Activation Type Configuration: ALL        KMS machine name from DNS:        Activation Interval: 120 minutes        Renewal Interval: 10080 minutes        KMS host caching: Enabled---------------------------------------------------------------------------------Exiting-----------------------------</code></pre><p>未知数x为输出命令密钥的后五位</p><pre><code>cscript ospp.vbs /unpkey:xxxxx</code></pre><h2 id="下载安装工具与Office配置文件"><a href="#下载安装工具与Office配置文件" class="headerlink" title="下载安装工具与Office配置文件"></a>下载安装工具与Office配置文件</h2><p>进入<a href="https://config.office.com/">Office配置文件</a>网站</p><p>根据流程配置就行</p><p><img src="/img/post/office/1.jpg" title="页面"></p><p>在激活项里选择 [自动接受EULA] ,选择 [KMS]</p><p><img src="/img/post/office/2.jpg" title="激活项"></p><p>右上角导出选择 [Office-Open-XML格式]</p><p><img src="/img/post/office/3.jpg"></p><h1 id="ODT下载安装Office"><a href="#ODT下载安装Office" class="headerlink" title="ODT下载安装Office"></a>ODT下载安装Office</h1><p>把配置文件移动到新建文件夹里</p><p>[Shift]+[右键]，点击（在此处打开PowerShell窗口）<br>如在Microsoft Store安装了终端的话，右键打开即可（Win11自带）</p><p>打开后运行命令</p><pre><code>.\setup.exe /download Configuration.xml</code></pre><p>xml文件命名可自定义，需在命令里改</p><p>目录下会出现名为 Office 的文件夹，文件大小在 2.5G 左右，耐心等待下载完毕（命令运行结束）</p><p>下载完毕后运行命令</p><pre><code>./setup.exe /configure Configuration.xml</code></pre><p>安装定制好的 Office，定制安装的组件会以图标的形式呈现在安装界面，可以再加确认。</p><p>安装完成后，即可使用</p><p>KMS激活为180天，可手动续订，相关教程请自行百度，这里不再多说</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 白嫖 </tag>
+            
+            <tag> 微软 </tag>
+            
+            <tag> Office </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo搭建</title>
+      <link href="/posts/416/"/>
+      <url>/posts/416/</url>
+      
+        <content type="html"><![CDATA[<h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>官网：<a href="https://git-scm.com/">https://git-scm.com/</a></p><p>1、访问Git官网，下载对应安装包，一路确定安装即可</p><p><img src="/img/post/hexo/1.jpg"></p><ul><li>Additional icons下的On the Desktop   |   表示是否在桌面创建快捷方式</li><li>Windows Explorer integration   |   右键菜单显示选项</li><li>(NEW!)Add a Git Bash ProFile to Windows Terminal   |   如果安装了Terminal（终端）则会在终端里添加Git选项</li></ul><p>其他默认即可</p><h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>官网：<a href="https://nodejs.org/">https://nodejs.org/</a></p><p>访问Node.js官网，下载对应安装包，一路确定安装即可</p><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Git终端输入</p><pre><code>npm install hexo -g</code></pre><h1 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h1><p>标题说了使用Github Page建造，所以你得先有一个Github账号<br>Github官网：<a href="https://github.com/">https://github.com</a>  |   可能需要VPN<br>相关教程请Google</p><h2 id="配置key"><a href="#配置key" class="headerlink" title="配置key"></a>配置key</h2><p>终端输入</p><pre><code>ssh-keygen -t rsa -C &quot;______&quot;</code></pre><ul><li>“______”填写你注册Github的邮箱</li><li>输入命令后三次回车即可</li></ul><p>进入   |   C:\Users\你的用户名\ .ssh</p><p>文件夹中会生成 [id_rsa.pub blue] 文件，建议使用<a href="https://code.visualstudio.com/">Vscode</a>打开</p><p>复制里面的全部内容，打开<a href="https://github.com/settings/keys">https://github.com/settings/keys</a></p><p><img src="/img/post/hexo/2.jpg"></p><p>点击 [New-SSH-Key]</p><p><img src="/img/post/hexo/3.jpg"></p><ul><li>Title为备注</li><li>在Key输入粘贴在<strong>id_rsa.pub</strong>里的全部内容</li><li>然后点击<strong>Add-SSH-Key blue</strong></li><li>输入Github账号密码</li></ul><h2 id="配置账号密码"><a href="#配置账号密码" class="headerlink" title="配置账号密码"></a>配置账号密码</h2><pre><code>git config --global user.name &quot;你的Github用户名&quot;git config --global user.email &quot;你的Github邮箱&quot;</code></pre><h1 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h1><p>在任意一个硬盘新建文件夹，进入文件夹右键打开终端</p><pre><code>hexo init</code></pre><ul><li>创建博客相应文件</li></ul><p><img src="/img/post/hexo/4.jpg"></p><table><thead><tr><th>文件</th><th>详细</th></tr></thead><tbody><tr><td>_config.yml</td><td>网站的配置信息，您可以在此配置大部分的参数</td></tr><tr><td>package.json</td><td>应用程序的信息</td></tr><tr><td>scaffolds</td><td>模版文件夹，当您新建文章时，Hexo会根据scaffold来建立文件</td></tr><tr><td>source</td><td>存放用户资源的地方</td></tr><tr><td>themes</td><td>存放主题的地方</td></tr><tr><td>source&#x2F;_posts</td><td>存放文章</td></tr></tbody></table><p>生成静态页面</p><pre><code>hexo g</code></pre><p>预览页面</p><pre><code>hexo s</code></pre><p>浏览器打开localhost:4000<br>看到以下页面说明成功创建</p><p><img src="/img/post/hexo/5.jpg"></p><h1 id="卸载Hexo"><a href="#卸载Hexo" class="headerlink" title="卸载Hexo"></a>卸载Hexo</h1><pre><code>npm uninstall hexo-cli -g</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Github博客 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Github Page </tag>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>下载旧版本ipa</title>
+      <link href="/posts/43644/"/>
+      <url>/posts/43644/</url>
+      
+        <content type="html"><![CDATA[<p>不想写这篇文章了，我弃坑了，就放着吧</p><h1 id="📢前言"><a href="#📢前言" class="headerlink" title="📢前言"></a>📢前言</h1><p>我使用iPhone的时候，常常因为储存空间不足而烦恼（就是没钱买64+GB<br>QQ这个臃肿的软件，最新版用了虚幻4做以至于大到软件包有1GB<br>所以才有了抓包旧软件这个想法，虽然听说爱思可以下载，但我没用过  </p><h1 id="🙌准备"><a href="#🙌准备" class="headerlink" title="🙌准备"></a>🙌准备</h1><h2 id="❗注意"><a href="#❗注意" class="headerlink" title="❗注意"></a>❗注意</h2><p>所有文件下载链接我都会在最后给出，着急下的直接滑倒最后即可</p><h2 id="📦Fiddler"><a href="#📦Fiddler" class="headerlink" title="📦Fiddler"></a>📦Fiddler</h2><p>Fiddler是一款网络抓包工具，它能记录所有客户端和服务器的http和https请求。允许你监视、设置断点、甚至修改输入输出数据。Fiddler包含了一个强大的基于事件脚本的子系统，并且能使用.net语言进行扩展。换言之，你对HTTP 协议越了解，你就能越掌握Fiddler的使用方法。你越使用Fiddler，就越能帮助你了解HTTP协议。Fiddler无论对开发人员或者测试人员来说，都是非常有用的工具</p><p><img src="/img/post/apple/b-1.jpg" alt="1" title="Fiddler"></p><h2 id="🎵iTunes"><a href="#🎵iTunes" class="headerlink" title="🎵iTunes"></a>🎵iTunes</h2><p>要用的iTunes可不是官方最新版的<br>最新版不支持登陆Applestore<br>所以我们要用最后一个支持登陆Applestore的iTunes</p><p><img src="/img/post/apple/b-2.jpg" alt="1" title="iTunes"></p><h1 id="🔛开始"><a href="#🔛开始" class="headerlink" title="🔛开始"></a>🔛开始</h1><h2 id="⚙️软件设置"><a href="#⚙️软件设置" class="headerlink" title="⚙️软件设置"></a>⚙️软件设置</h2><h3 id="🛠️Fiddler设置"><a href="#🛠️Fiddler设置" class="headerlink" title="🛠️Fiddler设置"></a>🛠️Fiddler设置</h3><p>这里设置的是Fiddler对https的支持，可能在运行是会有SSL证书失效问题，所以这里要手动安装证书  </p><p>打开Fiddler  </p><p>到此Fiddler设置完毕</p><h3 id="🛠️iTunes设置"><a href="#🛠️iTunes设置" class="headerlink" title="🛠️iTunes设置"></a>🛠️iTunes设置</h3><p>打开iTunes,软件上方 账户→登录  </p><p><strong>这里需登入你想要下载软件的id号，软件必须为已购买，国区是不能下载外区软件</strong></p><p>到此iTunes设置完毕</p><h3 id="获取软件BuilderID"><a href="#获取软件BuilderID" class="headerlink" title="获取软件BuilderID"></a>获取软件BuilderID</h3><p>什么是BuilderID？<br>Applestore对每个上架的软件都做了对应的记录，详细到每个版本号<br>要下载旧版软件必须要获取它的ID<br>这里给出两个获取方式  </p><p>第一：<a href="https://tools.lancely.tech/apple/app-history">在线查找</a>（推荐）  </p><p>第二：已越狱手机查找（不推荐）<br>Cydia获取插件源（这里不给出源，请自行Google）,搜索App降级相关字眼<br>进入AppleStore,长按软件获取，弹出版本号，查找即可</p><h3 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h3><p>进入Fidder主面板</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Apple </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>米哈游抽卡</title>
+      <link href="/posts/39241/"/>
+      <url>/posts/39241/</url>
+      
+        <content type="html"><![CDATA[<h2 id="甘雨"><a href="#甘雨" class="headerlink" title="甘雨"></a>甘雨</h2><p>在2022年2月1，下午3点05分，我抽中了甘雨<br>在此之前，常驻池第一个金是七七，UP申鹤池是莫娜<br>正当我以为不会出甘雨的时候，没想到啊，26发出了！！！<br>我爱你米哈游❤<br><img src="/img/post/mihoyo/1.jpg" alt="我的椰羊"><br>获得到甘雨后，第一时间上了米游社，带乐团或者冰套<br>乐团难刷啊，只好刷冰套了<br>把在45级之前的脆弱树脂80%刷了冰套，结果出来确实纯御（</p><h2 id="莫娜"><a href="#莫娜" class="headerlink" title="莫娜"></a>莫娜</h2><p>没图，是常驻池第一个金，原本想要牛杂的（</p><h2 id="七七"><a href="#七七" class="headerlink" title="七七"></a>七七</h2><p>可惜了，在雷神UP的时候,小保底出了七七<br><img src="/img/post/mihoyo/2.jpg" alt="七七"><br>米哈游啊，求求你多出点五星吧！</p><h2 id="魈"><a href="#魈" class="headerlink" title="魈"></a>魈</h2><p>大保底……<br><img src="/img/post/mihoyo/3.jpg" alt="降魔大圣"><br>tnnd没有和璞鸢只有一把精3的白缨枪，西风伤害不高（<br>早知道抽夜兰了（恼</p><h2 id="迪卢克"><a href="#迪卢克" class="headerlink" title="迪卢克"></a>迪卢克</h2><p>没图片</p><p>开服号的第一个小保底…<br>是一斗池子，手气真有这么黑吗（哭</p><h2 id="枫原万叶"><a href="#枫原万叶" class="headerlink" title="枫原万叶"></a>枫原万叶</h2><p>26抽哈哈哈哈哈，刚做玩任务就抽了<br><img src="/img/post/mihoyo/4.jpg" alt="万叶"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 琐碎杂事 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 琐事 </tag>
+            
+            <tag> 米哈游 </tag>
+            
+            <tag> 游戏 </tag>
+            
+        </tags>
       
     </entry>
     

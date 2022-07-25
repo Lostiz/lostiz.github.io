@@ -4345,3 +4345,11 @@ html.using-safari #blog_setting_card_radius_to_default:before{
 .navbar::after {
 	backdrop-filter: blur(15px);
 }
+
+.modal-content {
+	border-radius: 2rem;
+}
+
+.btn:not(:last-child) {
+    border-radius: 1rem;
+}
