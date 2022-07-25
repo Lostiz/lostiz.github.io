@@ -536,7 +536,7 @@ body.leftbar-can-headroom.headroom---unpinned #navbar-main{
     vertical-align: middle;
     width: 100%;
     position: absolute;
-    top: 135%;
+    top: 50%;
     left: 50%;
     right: 0;
     bottom: 0;
@@ -4332,12 +4332,6 @@ html.using-safari #blog_setting_card_radius_to_default:before{
 	white-space: nowrap;
 }
 
-#banner, #banner .shape {
-    background: transparent !important;
-    width: 100%;
-    height: 790px;
-}
-
 .navbar {
 	backdrop-filter: blur(0px);
 }
@@ -4350,6 +4344,15 @@ html.using-safari #blog_setting_card_radius_to_default:before{
 	border-radius: 2rem;
 }
 
-.btn:not(:last-child) {
-    border-radius: 1rem;
+@font-face{
+    font-family: 'GenshinImpact';
+    src: url('font/GenshinImpact.ttf');   
+}
+
+body {
+    font-family: 'GenshinImpact';
+}
+
+.navbar-nav .nav-link .nav-link-inner--text {
+    font-family: 'GenshinImpact';
 }
