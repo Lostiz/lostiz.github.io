@@ -4358,3 +4358,8 @@ hr {
 	border-top: 0.125rem solid rgb(255 128 128 / 75%);
 }
 
+/* 手机版搜索框圆角 */
+@media (max-width: 991.98px) {
+    .navbar-collapse.collapsing, .navbar-collapse.show {
+	    border-radius: 2.25rem;
+}
